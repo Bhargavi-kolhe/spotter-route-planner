@@ -182,3 +182,218 @@ body {
   text-align: center;
   font-size: 22px;
 }
+.driver-log-card {
+  margin-top: 25px;
+  background: #334155;
+  padding: 20px;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+.driver-log-card h3 {
+  margin-bottom: 10px;
+}
+.status-green {
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.status-orange {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-red {
+  color: red;
+  font-weight: bold;
+}
+/* =========================
+   DAILY ELD LOG
+   ========================= */
+
+.daily-eld-container {
+  margin-top: 25px;
+  background: #334155;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+}
+
+.daily-eld-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Main ELD grid */
+.daily-eld-grid {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #475569;
+  border-radius: 8px;
+}
+
+/* Header and rows */
+.daily-eld-header,
+.daily-eld-row {
+  display: flex;
+  min-width: 850px;
+}
+
+/* Left status column */
+.daily-eld-status-title,
+.daily-eld-status {
+  width: 130px;
+  min-width: 130px;
+  background: #475569;
+  border-right: 1px solid #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* Hour header */
+.daily-eld-hours {
+  flex: 1;
+  display: flex;
+  height: 45px;
+  background: #475569;
+}
+
+.daily-eld-hour {
+  flex: 1;
+  min-width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  border-right: 1px solid #64748b;
+}
+
+/* Each status row */
+.daily-eld-row {
+  min-height: 60px;
+  border-top: 1px solid #475569;
+}
+
+/* Timeline */
+.daily-eld-timeline {
+  position: relative;
+  flex: 1;
+  min-height: 60px;
+  background: #26364d;
+}
+
+/* Vertical hour lines */
+.daily-eld-grid-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #475569;
+}
+
+/* Horizontal ELD line */
+.daily-eld-event {
+  position: absolute;
+  top: 27px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* Different status line appearance */
+.daily-eld-event.driving {
+  height: 8px;
+  background: #60a5fa;
+}
+
+.daily-eld-event.on-duty {
+  height: 8px;
+  background: #f59e0b;
+}
+
+.daily-eld-event.off-duty {
+  height: 8px;
+  background: #94a3b8;
+}
+
+.daily-eld-event.sleeper {
+  height: 8px;
+  background: #a78bfa;
+}
+
+/* Time labels underneath */
+.daily-eld-time-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 130px;
+  margin-top: 8px;
+  color: #cbd5e1;
+  font-size: 11px;
+}
+
+/* Daily totals */
+.daily-eld-totals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.daily-eld-total-card {
+  background: #3f526d;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.daily-eld-total-card h4 {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.daily-eld-total-card p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Day selector */
+.eld-day-selector {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.eld-day-button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #475569;
+  color: white;
+  cursor: pointer;
+}
+
+.eld-day-button:hover {
+  background: #2563eb;
+}
+
+.eld-day-button.active {
+  background: #2563eb;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .daily-eld-totals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .daily-eld-container {
+    padding: 12px;
+  }
+}
