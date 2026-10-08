@@ -46,7 +46,7 @@ function App() {
       setResult(null);
 
       const response = await axios.post(
-        "http://localhost:8000/api/trip/",
+        "https://bhargavi14.pythonanywhere.com/api/trip/",
         {
           current_location: formData.current_location,
           pickup_location: formData.pickup_location,
